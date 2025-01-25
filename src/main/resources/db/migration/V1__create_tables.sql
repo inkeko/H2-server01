@@ -1,0 +1,36 @@
+CREATE TABLE country (
+  Code CHAR(3) NOT NULL,
+  Name VARCHAR(52) NOT NULL,
+  Continent VARCHAR(50) NOT NULL DEFAULT 'Asia',
+  Region VARCHAR(26) NOT NULL,
+  SurfaceArea DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+  IndepYear SMALLINT DEFAULT NULL,
+  Population INT NOT NULL DEFAULT 0,
+  LifeExpectancy DECIMAL(3,1) DEFAULT NULL,
+  GNP DECIMAL(10,2) DEFAULT NULL,
+  GNPOld DECIMAL(10,2) DEFAULT NULL,
+  LocalName VARCHAR(45) NOT NULL,
+  GovernmentForm VARCHAR(45) NOT NULL,
+  HeadOfState VARCHAR(60) DEFAULT NULL,
+  Capital INT DEFAULT NULL,
+  Code2 CHAR(2) NOT NULL,
+  PRIMARY KEY (Code)
+);
+
+CREATE TABLE city (
+  ID INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  Name VARCHAR(35) NOT NULL,
+  CountryCode CHAR(3) NOT NULL,
+  District VARCHAR(20) NOT NULL,
+  Population INT NOT NULL,
+  CONSTRAINT FK_City_Country FOREIGN KEY (CountryCode) REFERENCES country (Code)
+);
+
+CREATE TABLE countrylanguage (
+  CountryCode CHAR(3) NOT NULL,
+  Language VARCHAR(30) NOT NULL,
+  IsOfficial CHAR(1) NOT NULL DEFAULT 'F',
+  Percentage DECIMAL(4,1) NOT NULL DEFAULT 0.0,
+  PRIMARY KEY (CountryCode, Language),
+  CONSTRAINT FK_CountryLanguage_Country FOREIGN KEY (CountryCode) REFERENCES country (Code)
+);
