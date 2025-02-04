@@ -4,18 +4,28 @@ package org.example.security;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.io.Decoders;
+import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.security.Key;
 import java.util.Date;
 
 @Component
 public class JwtUtil {
 
-    // Egy titkos kulcs, ezt természetesen biztonságosan kell tárolni (pl. környezeti változóként)
-    private final String SECRET_KEY = "mysecretkey123456";
+    // A titkos kulcsot az application.properties-ből olvassuk be.
+    // Győződj meg róla, hogy a jwt.secret értéke base64-kódolt és legalább 256 bit hosszú!
+    private final Key key;
 
     // Token érvényessége: 10 óra (példa)
     private final long JWT_EXPIRATION = 10 * 60 * 60 * 1000;
+
+    public JwtUtil(@Value("${jwt.secret}") String base64Secret) {
+        // A base64 kódolt titkos kulcs dekódolása és Key objektummá alakítása
+        this.key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(base64Secret));
+    }
 
     // Token generálása adott felhasználónév alapján
     public String generateToken(String username) {
@@ -23,7 +33,7 @@ public class JwtUtil {
                 .setSubject(username)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + JWT_EXPIRATION))
-                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
+                .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
 
@@ -44,10 +54,10 @@ public class JwtUtil {
     }
 
     private Claims getClaims(String token) {
-        return Jwts.parser()
-                .setSigningKey(SECRET_KEY)
+        return Jwts.parserBuilder()
+                .setSigningKey(key)
+                .build()
                 .parseClaimsJws(token)
                 .getBody();
     }
 }
-
