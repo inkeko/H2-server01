@@ -23,13 +23,16 @@ public class SecurityConfig {
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/auth/**").permitAll()  // Az autentikációs endpointok nyitva vannak
-                        .requestMatchers("/api/**").authenticated() // A többi API védelem alatt áll
+                        .requestMatchers("/auth/**").permitAll()  // Autentikációs végpontok
+                        .requestMatchers("/h2-console/**").permitAll() // H2 konzol elérése
+                        .requestMatchers("/api/**").authenticated() // Védett API végpontok
                         .anyRequest().permitAll()
                 )
+                // Engedélyezzük az iframe-ek használatát ugyanarról az originről (h2-console-hoz szükséges)
+                .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin()))
                 .httpBasic(httpBasic -> httpBasic.disable()); // Alap Basic Auth kikapcsolása
 
-        // A JWT filtert a UsernamePasswordAuthenticationFilter előtt kell regisztrálni
+        // JWT filter regisztrálása
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
