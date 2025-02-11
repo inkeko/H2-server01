@@ -1,4 +1,4 @@
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Villeurbanne', 'FRA', 'Rhône-Alpes', 124215),
 ('Metz', 'FRA', 'Lorraine', 123776),
@@ -64,7 +64,7 @@ VALUES
 ('Sundsvall', 'SWE', 'Västernorrlands län', 93126),
 ('Gävle', 'SWE', 'Gävleborgs län', 90742),
 ('Jamestown', 'SHN', 'Saint Helena', 1500);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Città del Vaticano', 'VAT', '–', 455),
 ('Caracas', 'VEN', 'Distrito Federal', 1975294),
@@ -86,7 +86,7 @@ VALUES
 ('Baruta', 'VEN', 'Miranda', 207290),
 ('Puerto Cabello', 'VEN', 'Carabobo', 187722),
 ('Santa Ana de Coro', 'VEN', 'Falcón', 185766);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Los Teques', 'VEN', 'Miranda', 178784),
 ('Punto Fijo', 'VEN', 'Falcón', 167215),
@@ -108,7 +108,7 @@ VALUES
 ('Valle de la Pascua', 'VEN', 'Guárico', 95927),
 ('Araure', 'VEN', 'Portuguesa', 94269),
 ('San Fernando de Apure', 'VEN', 'Apure', 93809);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('San Felipe', 'VEN', 'Yaracuy', 90940),
 ('El Limón', 'VEN', 'Aragua', 90000),
@@ -130,7 +130,7 @@ VALUES
 ('Saratov', 'RUS', 'Saratov', 874000),
 ('Toljatti', 'RUS', 'Samara', 722900),
 ('Uljanovsk', 'RUS', 'Uljanovsk', 667400);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Izevsk', 'RUS', 'Udmurtia', 652800),
 ('Krasnodar', 'RUS', 'Krasnodar', 639000),
@@ -152,7 +152,7 @@ VALUES
 ('Tomsk', 'RUS', 'Tomsk', 482100),
 ('Kirov', 'RUS', 'Kirov', 466200),
 ('Ivanovo', 'RUS', 'Ivanovo', 459200);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Tšeboksary', 'RUS', 'Tšuvassia', 459200),
 ('Brjansk', 'RUS', 'Brjansk', 457400),
@@ -174,7 +174,7 @@ VALUES
 ('Vladimir', 'RUS', 'Vladimir', 337100),
 ('Mahatškala', 'RUS', 'Dagestan', 332800),
 ('Tšerepovets', 'RUS', 'Vologda', 324400);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Saransk', 'RUS', 'Mordva', 314800),
 ('Tambov', 'RUS', 'Tambov', 312000),
@@ -196,7 +196,7 @@ VALUES
 ('Staryi Oskol', 'RUS', 'Belgorod', 213800),
 ('Zelenograd', 'RUS', 'Moscow (City)', 207100),
 ('Balakovo', 'RUS', 'Saratov', 206000);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Novorossijsk', 'RUS', 'Krasnodar', 203300),
 ('Pihkova', 'RUS', 'Pihkova', 201500),
@@ -218,7 +218,7 @@ VALUES
 ('Armavir', 'RUS', 'Krasnodar', 164900),
 ('Ljubertsy', 'RUS', 'Moskova', 163900),
 ('Rubtsovsk', 'RUS', 'Altai', 162600);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Kovrov', 'RUS', 'Vladimir', 159900),
 ('Nahodka', 'RUS', 'Primorje', 157700),
@@ -240,7 +240,7 @@ VALUES
 ('Pjatigorsk', 'RUS', 'Stavropol', 132500),
 ('Korolev', 'RUS', 'Moskova', 132400),
 ('Serpuhov', 'RUS', 'Moskova', 132000);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Odintsovo', 'RUS', 'Moskova', 127400),
 ('Orehovo-Zujevo', 'RUS', 'Moskova', 124900),
@@ -262,7 +262,7 @@ VALUES
 ('Sergijev Posad', 'RUS', 'Moskova', 111100),
 ('Arzamas', 'RUS', 'Nizni Novgorod', 110700),
 ('Kiseljovsk', 'RUS', 'Kemerovo', 110000);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Novotroitsk', 'RUS', 'Orenburg', 109600),
 ('Obninsk', 'RUS', 'Kaluga', 108300),
@@ -284,7 +284,7 @@ VALUES
 ('Kinešma', 'RUS', 'Ivanovo', 100000),
 ('Kuznetsk', 'RUS', 'Penza', 98200),
 ('Uhta', 'RUS', 'Komi', 98000);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Jessentuki', 'RUS', 'Stavropol', 97900),
 ('Tobolsk', 'RUS', 'Tjumen', 97600),
@@ -306,7 +306,7 @@ VALUES
 ('Klin', 'RUS', 'Moskova', 90000),
 ('Tšaikovski', 'RUS', 'Perm', 90000),
 ('Novyi Urengoi', 'RUS', 'Yamalin Nenetsia', 89800);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Ho Chi Minh City', 'VNM', 'Ho Chi Minh City', 3980000),
 ('Hanoi', 'VNM', 'Hanoi', 1410000),
@@ -328,7 +328,7 @@ VALUES
 ('Cam Ranh', 'VNM', 'Khanh Hoa', 114041),
 ('Vinh', 'VNM', 'Nghe An', 112455),
 ('My Tho', 'VNM', 'Tien Giang', 108404);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Da Lat', 'VNM', 'Lam Dong', 106409),
 ('Buon Ma Thuot', 'VNM', 'Dac Lac', 97044),
@@ -350,7 +350,7 @@ VALUES
 ('Jacksonville', 'USA', 'Florida', 735167),
 ('Columbus', 'USA', 'Ohio', 711470),
 ('Austin', 'USA', 'Texas', 656562);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Baltimore', 'USA', 'Maryland', 651154),
 ('Memphis', 'USA', 'Tennessee', 650100),
@@ -372,7 +372,7 @@ VALUES
 ('Long Beach', 'USA', 'California', 461522),
 ('Albuquerque', 'USA', 'New Mexico', 448607),
 ('Kansas City', 'USA', 'Missouri', 441545);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Fresno', 'USA', 'California', 427652),
 ('Virginia Beach', 'USA', 'Virginia', 425257),
@@ -394,7 +394,7 @@ VALUES
 ('Cincinnati', 'USA', 'Ohio', 331285),
 ('Anaheim', 'USA', 'California', 328014),
 ('Toledo', 'USA', 'Ohio', 313619);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Tampa', 'USA', 'Florida', 303447),
 ('Buffalo', 'USA', 'New York', 292648),
@@ -416,7 +416,7 @@ VALUES
 ('Baton Rouge', 'USA', 'Louisiana', 227818),
 ('Hialeah', 'USA', 'Florida', 226419),
 ('Lincoln', 'USA', 'Nebraska', 225581);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Greensboro', 'USA', 'North Carolina', 223891),
 ('Plano', 'USA', 'Texas', 222030),
@@ -438,7 +438,7 @@ VALUES
 ('Grand Rapids', 'USA', 'Michigan', 197800),
 ('Richmond', 'USA', 'Virginia', 197790),
 ('Yonkers', 'USA', 'New York', 196086);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Spokane', 'USA', 'Washington', 195629),
 ('Glendale', 'USA', 'California', 194973),
@@ -460,7 +460,7 @@ VALUES
 ('Chandler', 'USA', 'Arizona', 176581),
 ('Laredo', 'USA', 'Texas', 176576),
 ('Henderson', 'USA', 'Nevada', 175381);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Arlington', 'USA', 'Virginia', 174838),
 ('Knoxville', 'USA', 'Tennessee', 173890),
@@ -482,7 +482,7 @@ VALUES
 ('Santa Clarita', 'USA', 'California', 151088),
 ('Salinas', 'USA', 'California', 151060),
 ('Tallahassee', 'USA', 'Florida', 150624);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Rockford', 'USA', 'Illinois', 150115),
 ('Pomona', 'USA', 'California', 149473),
@@ -504,7 +504,7 @@ VALUES
 ('Bridgeport', 'USA', 'Connecticut', 139529),
 ('Hollywood', 'USA', 'Florida', 139357),
 ('Warren', 'USA', 'Michigan', 138247);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Torrance', 'USA', 'California', 137946),
 ('Eugene', 'USA', 'Oregon', 137893),
@@ -526,7 +526,7 @@ VALUES
 ('Flint', 'USA', 'Michigan', 124943),
 ('Paradise', 'USA', 'Nevada', 124682),
 ('Mesquite', 'USA', 'Texas', 124523);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Sterling Heights', 'USA', 'Michigan', 124471),
 ('Sioux Falls', 'USA', 'South Dakota', 123975),
@@ -548,7 +548,7 @@ VALUES
 ('Palmdale', 'USA', 'California', 116670),
 ('Columbia', 'USA', 'South Carolina', 116278),
 ('El Monte', 'USA', 'California', 115965);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Abilene', 'USA', 'Texas', 115930),
 ('North Las Vegas', 'USA', 'Nevada', 115488),
@@ -570,7 +570,7 @@ VALUES
 ('Costa Mesa', 'USA', 'California', 108724),
 ('Peoria', 'USA', 'Arizona', 108364),
 ('South Bend', 'USA', 'Indiana', 107789);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Downey', 'USA', 'California', 107323),
 ('Waterbury', 'USA', 'Connecticut', 107271),
@@ -592,7 +592,7 @@ VALUES
 ('Green Bay', 'USA', 'Wisconsin', 102313),
 ('Cape Coral', 'USA', 'Florida', 102286),
 ('Arvada', 'USA', 'Colorado', 102153);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Pueblo', 'USA', 'Colorado', 102121),
 ('Sandy', 'USA', 'Utah', 101853),
@@ -614,7 +614,7 @@ VALUES
 ('Norman', 'USA', 'Oklahoma', 94193),
 ('Richmond', 'USA', 'California', 94100),
 ('Albany', 'USA', 'New York', 93994);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Brockton', 'USA', 'Massachusetts', 93653),
 ('Roanoke', 'USA', 'Virginia', 93357),
@@ -636,7 +636,7 @@ VALUES
 ('Charleston', 'USA', 'South Carolina', 89063),
 ('Charlotte Amalie', 'VIR', 'St Thomas', 13000),
 ('Harare', 'ZWE', 'Harare', 1410000);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Bulawayo', 'ZWE', 'Bulawayo', 621742),
 ('Chitungwiza', 'ZWE', 'Harare', 274912),

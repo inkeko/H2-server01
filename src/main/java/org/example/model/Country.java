@@ -1,7 +1,6 @@
 package org.example.model;
 
 import jakarta.persistence.*;
-
 import java.util.Objects;
 
 @Entity
@@ -9,135 +8,207 @@ import java.util.Objects;
 public class Country {
 
     @Id
-    @Column(name= "Code", nullable = false, length = 3)
-    private String code; // String, mert CHAR(3) az adatbázisban
+    @Column(name = "Code", nullable = false, length = 3)
+    private String code;
 
-    @Column(name="Name", nullable = false, length = 52) // 52 karakter hossz
+    @Column(name = "Name", nullable = false, length = 52)
     private String name;
 
-    @Column(name="Continent", nullable = false, length = 50)
+    @Column(name = "Continent", nullable = false, length = 50)
     private String continent;
 
-    @Column(name="Region", nullable = false, length = 26)
+    @Column(name = "Region", nullable = false, length = 26)
     private String region;
 
-    @Column(name="SurfaceArea", nullable = false)
-    private Double surfaceArea;
+    @Column(name = "Surfacearea", nullable = false)
+    private Double surfacearea;
 
-    @Column(name="IndepYear")
-    private Short indepYear; // SMALLINT megfelelője a Java-ban
+    @Column(name = "Indepyears")
+    private Short indepyears;
 
-    @Column(name="Population", nullable = false)
+    @Column(name = "Population", nullable = false)
     private Integer population;
 
-    @Column(name="LifeExpectancy" )
-    private Double lifeExpectancy;
+    @Column(name = "Lifeexpectancy")
+    private Double lifeexpectancy;
 
-    @Column(name="GNP")
+    @Column(name = "GNP")
     private Double gnp;
 
-    @Column(name="GNPOld" )
+    @Column(name = "GNPOld")
     private Double gnpOld;
 
-    @Column(name="LocalName", nullable = false, length = 45)
-    private String localName;
+    @Column(name = "Localname", nullable = false, length = 45)
+    private String localname;
 
-    @Column(name="GovernmentForm", nullable = false, length = 45)
-    private String governmentForm;
+    @Column(name = "Government", nullable = false, length = 45)
+    private String government;
 
-    @Column(name="HeadOfState", length = 60)
-    private String headOfState;
+    @Column(name = "Leader", length = 60)
+    private String leader;
 
-    @Column(name="Capital")
+    @Column(name = "Capital")
     private Integer capital;
 
-    @Column(name="Code2", nullable = false, length = 2)
+    @Column(name = "Code2", nullable = false, length = 2)
     private String code2;
 
-    // Konstruktorok
-    public Country() {}
+    // Getterek, setterek maradhatn...
 
-    public Country(String code, String name, String continent, String region, Double surfaceArea, Short indepYear,
-                   Integer population, Double lifeExpectancy, Double gnp, Double gnpOld, String localName,
-                   String governmentForm, String headOfState, Integer capital, String code2) {
+
+    public Country() {
+    }
+
+    public Country(String code, String name, String continent, String region, Double surfacearea, Short indepyears, Integer population, Double lifeexpectancy, Double gnp, Double gnpOld, String localname, String government, String leader, Integer capital, String code2) {
         this.code = code;
         this.name = name;
         this.continent = continent;
         this.region = region;
-        this.surfaceArea = surfaceArea;
-        this.indepYear = indepYear;
+        this.surfacearea = surfacearea;
+        this.indepyears = indepyears;
         this.population = population;
-        this.lifeExpectancy = lifeExpectancy;
+        this.lifeexpectancy = lifeexpectancy;
         this.gnp = gnp;
         this.gnpOld = gnpOld;
-        this.localName = localName;
-        this.governmentForm = governmentForm;
-        this.headOfState = headOfState;
+        this.localname = localname;
+        this.government = government;
+        this.leader = leader;
         this.capital = capital;
         this.code2 = code2;
     }
 
-    // Getterek és Setterek
-    public String getCode() { return code; }
-    public void setCode(String code) { this.code = code; }
+    public String getCode() {
+        return code;
+    }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public void setCode(String code) {
+        this.code = code;
+    }
 
-    public String getContinent() { return continent; }
-    public void setContinent(String continent) { this.continent = continent; }
+    public String getName() {
+        return name;
+    }
 
-    public String getRegion() { return region; }
-    public void setRegion(String region) { this.region = region; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public Double getSurfaceArea() { return surfaceArea; }
-    public void setSurfaceArea(Double surfaceArea) { this.surfaceArea = surfaceArea; }
+    public String getContinent() {
+        return continent;
+    }
 
-    public Short getIndepYear() { return indepYear; }
-    public void setIndepYear(Short indepYear) { this.indepYear = indepYear; }
+    public void setContinent(String continent) {
+        this.continent = continent;
+    }
 
-    public Integer getPopulation() { return population; }
-    public void setPopulation(Integer population) { this.population = population; }
+    public String getRegion() {
+        return region;
+    }
 
-    public Double getLifeExpectancy() { return lifeExpectancy; }
-    public void setLifeExpectancy(Double lifeExpectancy) { this.lifeExpectancy = lifeExpectancy; }
+    public void setRegion(String region) {
+        this.region = region;
+    }
 
-    public Double getGnp() { return gnp; }
-    public void setGnp(Double gnp) { this.gnp = gnp; }
+    public Double getSurfaceArea() {
+        return surfacearea;
+    }
 
-    public Double getGnpOld() { return gnpOld; }
-    public void setGnpOld(Double gnpOld) { this.gnpOld = gnpOld; }
+    public void setSurfaceArea(Double surfaceArea) {
+        this.surfacearea = surfaceArea;
+    }
 
-    public String getLocalName() { return localName; }
-    public void setLocalName(String localName) { this.localName = localName; }
+    public Short getIndepYear() {
+        return indepyears;
+    }
 
-    public String getGovernmentForm() { return governmentForm; }
-    public void setGovernmentForm(String governmentForm) { this.governmentForm = governmentForm; }
+    public void setIndepYear(Short indepYear) {
+        this.indepyears = indepYear;
+    }
 
-    public String getHeadOfState() { return headOfState; }
-    public void setHeadOfState(String headOfState) { this.headOfState = headOfState; }
+    public Integer getPopulation() {
+        return population;
+    }
 
-    public Integer getCapital() { return capital; }
-    public void setCapital(Integer capital) { this.capital = capital; }
+    public void setPopulation(Integer population) {
+        this.population = population;
+    }
 
-    public String getCode2() { return code2; }
-    public void setCode2(String code2) { this.code2 = code2; }
+    public Double getLifeExpectancy() {
+        return lifeexpectancy;
+    }
 
-    // equals() és hashCode()
+    public void setLifeExpectancy(Double lifeExpectancy) {
+        this.lifeexpectancy = lifeExpectancy;
+    }
+
+    public Double getGnp() {
+        return gnp;
+    }
+
+    public void setGnp(Double gnp) {
+        this.gnp = gnp;
+    }
+
+    public Double getGnpOld() {
+        return gnpOld;
+    }
+
+    public void setGnpOld(Double gnpOld) {
+        this.gnpOld = gnpOld;
+    }
+
+    public String getLocalName() {
+        return localname;
+    }
+
+    public void setLocalName(String localName) {
+        this.localname = localName;
+    }
+
+    public String getGovernmentForm() {
+        return government;
+    }
+
+    public void setGovernmentForm(String governmentForm) {
+        this.government = governmentForm;
+    }
+
+    public String getHeadOfState() {
+        return leader;
+    }
+
+    public void setHeadOfState(String headOfState) {
+        this.leader = headOfState;
+    }
+
+    public Integer getCapital() {
+        return capital;
+    }
+
+    public void setCapital(Integer capital) {
+        this.capital = capital;
+    }
+
+    public String getCode2() {
+        return code2;
+    }
+
+    public void setCode2(String code2) {
+        this.code2 = code2;
+    }
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Country country = (Country) o;
-        return Objects.equals(code, country.code);
+        return Objects.equals(code, country.code) && Objects.equals(name, country.name) && Objects.equals(continent, country.continent) && Objects.equals(region, country.region) && Objects.equals(surfacearea, country.surfacearea) && Objects.equals(indepyears, country.indepyears) && Objects.equals(population, country.population) && Objects.equals(lifeexpectancy, country.lifeexpectancy) && Objects.equals(gnp, country.gnp) && Objects.equals(gnpOld, country.gnpOld) && Objects.equals(localname, country.localname) && Objects.equals(government, country.government) && Objects.equals(leader, country.leader) && Objects.equals(capital, country.capital) && Objects.equals(code2, country.code2);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(code);
+        return Objects.hash(code, name, continent, region, surfacearea, indepyears, population, lifeexpectancy, gnp, gnpOld, localname, government, leader, capital, code2);
     }
 
-    // toString()
     @Override
     public String toString() {
         return "Country{" +
@@ -145,15 +216,15 @@ public class Country {
                 ", name='" + name + '\'' +
                 ", continent='" + continent + '\'' +
                 ", region='" + region + '\'' +
-                ", surfaceArea=" + surfaceArea +
-                ", indepYear=" + indepYear +
+                ", surfaceArea=" + surfacearea +
+                ", indepYear=" + indepyears +
                 ", population=" + population +
-                ", lifeExpectancy=" + lifeExpectancy +
+                ", lifeExpectancy=" + lifeexpectancy +
                 ", gnp=" + gnp +
                 ", gnpOld=" + gnpOld +
-                ", localName='" + localName + '\'' +
-                ", governmentForm='" + governmentForm + '\'' +
-                ", headOfState='" + headOfState + '\'' +
+                ", localName='" + localname + '\'' +
+                ", governmentForm='" + government + '\'' +
+                ", headOfState='" + leader + '\'' +
                 ", capital=" + capital +
                 ", code2='" + code2 + '\'' +
                 '}';

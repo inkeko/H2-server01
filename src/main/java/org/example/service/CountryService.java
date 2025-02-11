@@ -36,5 +36,8 @@ public class CountryService {
         }
         return countryRepository.findByNameStartingWithAndPopulationGreaterThan(prefix, population);
     }
+    public List<Object[]> getBasicCountryInfo() {
+        return countryRepository.findBasicCountryInfo();
+    }
 }
 

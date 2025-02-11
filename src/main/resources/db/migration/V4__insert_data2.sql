@@ -1,4 +1,4 @@
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Vejalpur', 'IND', 'Gujarat', 89053),
 ('Baghdad', 'IRQ', 'Baghdad', 4336000),
@@ -29,7 +29,7 @@ VALUES
 ('Zahedan', 'IRN', 'Sistan va Baluchesta', 419518),
 ('Rasht', 'IRN', 'Gilan', 417748),
 ('Hamadan', 'IRN', 'Hamadan', 401281);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Kerman', 'IRN', 'Kerman', 384991),
 ('Arak', 'IRN', 'Markazi', 303772),
@@ -61,7 +61,7 @@ VALUES
 ('Malayer', 'IRN', 'Hamadan', 159467),
 ('Saveh', 'IRN', 'Markazi', 130016),
 ('Torbat-e Heydariyeh', 'IRN', 'Khorasan', 120040);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Eslamshahr', 'IRN', 'Teheran', 389102),
 ('Qaemshahr', 'IRN', 'Mazandaran', 204953),
@@ -108,7 +108,7 @@ VALUES
 ('Bandar Abbas', 'IRN', 'Hormozgan', 435751),
 ('Bojnurd', 'IRN', 'Khorasan', 218799),
 ('Kashan', 'IRN', 'Esfahan', 272359);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Qazvin', 'IRN', 'Qazvin', 333026),
 ('Khorramabad', 'IRN', 'Lorestan', 356739),
@@ -161,7 +161,7 @@ VALUES
 ('Quchan', 'IRN', 'Khorasan', 112490),
 ('Sabzevar', 'IRN', 'Khorasan', 226183),
 ('Torbat-e Heydarieh', 'IRN', 'Khorasan', 164101);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Khorramabad', 'IRN', 'Lorestan', 356739),
 ('Shahr-e Babak', 'IRN', 'Kerman', 100171),
@@ -225,7 +225,7 @@ VALUES
 ('Parsabad', 'IRN', 'Ardabil', 97151),
 ('Borujerd', 'IRN', 'Lorestan', 257169),
 ('Chabahar', 'IRN', 'Sistan va Baluchestan', 88745);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Baneh', 'IRN', 'Kordestan', 87847),
 ('Naghadeh', 'IRN', 'Azarbayjan-e Gharbi', 105460),
@@ -300,7 +300,7 @@ VALUES
 ('Bardaskan', 'IRN', 'Khorasan-e Razavi', 61000),
 ('Torbat-e Jam', 'IRN', 'Khorasan-e Razavi', 100449),
 ('Birjand', 'IRN', 'South Khorasan', 192718);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Qaen', 'IRN', 'South Khorasan', 124499),
 ('Tabas', 'IRN', 'South Khorasan', 70479),
@@ -354,7 +354,7 @@ VALUES
 ('Urmia', 'IRN', 'Azarbayjan-e Gharbi', 963738),
 ('Sanandaj', 'IRN', 'Kordestan', 373987),
 ('Qom', 'IRN', 'Qom', 958471);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Semnan', 'IRN', 'Semnan', 218579),
 ('Gorgan', 'IRN', 'Golestan', 346501),
@@ -410,7 +410,7 @@ VALUES
 ('Ghorveh', 'IRN', 'Kordestan', 67826),
 ('Hamadan', 'IRN', 'Hamadan', 555025),
 ('Nahavand', 'IRN', 'Hamadan', 87457);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Asadabad', 'IRN', 'Hamadan', 51845),
 ('Malayer', 'IRN', 'Hamadan', 176573),
@@ -472,7 +472,7 @@ VALUES
 ('Bandar Torkaman', 'IRN', 'Golestan', 38140),
 ('Gorgan', 'IRN', 'Golestan', 346501),
 ('Aliabad', 'IRN', 'Golestan', 95054);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Bandar-e Anzali', 'IRN', 'Gilan', 110826),
 ('Rasht', 'IRN', 'Gilan', 679995),
@@ -530,7 +530,7 @@ VALUES
 ('Omidiyeh', 'IRN', 'Khuzestan', 56342),
 ('Ramshir', 'IRN', 'Khuzestan', 26578),
 ('Izeh', 'IRN', 'Khuzestan', 119122);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Ramhormoz', 'IRN', 'Khuzestan', 57170),
 ('Yasuj', 'IRN', 'Kohgiluyeh and Boyer-Ahmad', 134532),
@@ -589,7 +589,7 @@ VALUES
 ('Bonab', 'IRN', 'East Azarbaijan', 80199),
 ('Mianeh', 'IRN', 'East Azarbaijan', 89402),
 ('Ahar', 'IRN', 'East Azarbaijan', 88822);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Sarab', 'IRN', 'East Azarbaijan', 45374),
 ('Kaleybar', 'IRN', 'East Azarbaijan', 17178),
@@ -646,7 +646,7 @@ VALUES
 ('Kermanshah', 'IRN', 'Kermanshah', 945641),
 ('Urmia', 'IRN', 'West Azarbaijan', 736224),
 ('Zahedan', 'IRN', 'Sistan and Baluchestan', 588743);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Zabol', 'IRN', 'Sistan and Baluchestan', 137722),
 ('Chabahar', 'IRN', 'Sistan and Baluchestan', 104524),
@@ -700,7 +700,7 @@ VALUES
 ('Bam', 'IRN', 'Kerman', 127396),
 ('Jiroft', 'IRN', 'Kerman', 94827),
 ('Sirjan', 'IRN', 'Kerman', 209746);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Shahr-e Babak', 'IRN', 'Kerman', 86557),
 ('Bandar-e Abbas', 'IRN', 'Hormozgan', 680366),
@@ -759,7 +759,7 @@ VALUES
 ('Zanjan', 'IRN', 'Zanjan', 433475),
 ('Sanandaj', 'IRN', 'Kurdistan', 432330),
 ('Qom', 'IRN', 'Qom', 1201158);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Hamedan', 'IRN', 'Hamadan', 563444),
 ('Malayer', 'IRN', 'Hamadan', 174944),
@@ -814,7 +814,7 @@ VALUES
 ('Shiraz', 'IRN', 'Fars', 1565572),
 ('Ahvaz', 'IRN', 'Khuzestan', 1166558),
 ('Tehran', 'IRN', 'Tehran', 8693706);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Kerman', 'IRN', 'Kerman', 677650),
 ('Rafsanjan', 'IRN', 'Kerman', 146039),
@@ -863,7 +863,7 @@ VALUES
 ('Lashkar Gah', 'AFG', 'Helmand', 202500),
 ('Herat', 'AFG', 'Herat', 503400),
 ('Mazar-e Sharif', 'AFG', 'Balkh', 504700);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Chaghcharan', 'AFG', 'Ghor', 15000),
 ('Maimana', 'AFG', 'Faryab', 149040),
@@ -906,7 +906,7 @@ VALUES
 ('Shiberghan', 'AFG', 'Jowzjan', 158500),
 ('Herat', 'AFG', 'Herat', 503400),
 ('Mazar-e Sharif', 'AFG', 'Balkh', 504700);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Kabul', 'AFG', 'Kabul', 4346000),
 ('Kandahar', 'AFG', 'Kandahar', 491500),
@@ -945,7 +945,7 @@ VALUES
 ('Herat', 'AFG', 'Herat', 503400),
 ('Mazar-e Sharif', 'AFG', 'Balkh', 504700),
 ('Kandahar', 'AFG', 'Kandahar', 491500);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Tirana', 'ALB', 'Tirana', 418495),
 ('Durres', 'ALB', 'Durres', 113249),
@@ -985,7 +985,7 @@ VALUES
 ('Gramsh', 'ALB', 'Elbasan', 8612),
 ('Dimal', 'ALB', 'Berat', 10059),
 ('Belsh', 'ALB', 'Elbasan', 8753);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Përrenjas', 'ALB', 'Elbasan', 6707),
 ('Libohovë', 'ALB', 'Gjirokastër', 3711),
@@ -1028,7 +1028,7 @@ VALUES
 ('Rahovec', 'ALB', 'Kosovo', 56780),
 ('Kaçanik', 'ALB', 'Kosovo', 36690),
 ('Skënderaj', 'ALB', 'Kosovo', 53730);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Hani i Elezit', 'ALB', 'Kosovo', 12106),
 ('Klinë', 'ALB', 'Kosovo', 57000),

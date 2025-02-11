@@ -25,7 +25,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/auth/**").permitAll()  // Autentikációs végpontok
                         .requestMatchers("/h2-console/**").permitAll() // H2 konzol elérése
-                        .requestMatchers("/api/**").authenticated() // Védett API végpontok
+                        .requestMatchers("/api/**").permitAll()
                         .anyRequest().permitAll()
                 )
                 // Engedélyezzük az iframe-ek használatát ugyanarról az originről (h2-console-hoz szükséges)

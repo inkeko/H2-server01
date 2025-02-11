@@ -1,4 +1,4 @@
-INSERT INTO city ( Name, CountryCode, District, Population)
+INSERT INTO city ( Name, Countrycode, District, Population)
 VALUES
 ('Kabul', 'AFG', 'Kabol', 1780000),
 ('Qandahar', 'AFG', 'Qandahar', 237500),
@@ -100,7 +100,7 @@ VALUES
 ('Resistencia', 'ARG', 'Chaco', 229212),
 ('José C. Paz', 'ARG', 'Buenos Aires', 221754),
 ('Paraná', 'ARG', 'Entre Rios', 207041);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Godoy Cruz', 'ARG', 'Mendoza', 206998),
 ('Posadas', 'ARG', 'Misiones', 201273),
@@ -194,7 +194,7 @@ VALUES
 ('Saint George', 'BMU', 'Saint George´s', 1800),
 ('Hamilton', 'BMU', 'Hamilton', 1200),
 ('Thimphu', 'BTN', 'Thimphu', 22000);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Santa Cruz de la Sierra', 'BOL', 'Santa Cruz', 935361),
 ('La Paz', 'BOL', 'La Paz', 758141),
@@ -219,7 +219,7 @@ VALUES
 ('Recife', 'BRA', 'Pernambuco', 1378087),
 ('Porto Alegre', 'BRA', 'Rio Grande do Sul', 1314032),
 ('Manaus', 'BRA', 'Amazonas', 1255049);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Belém', 'BRA', 'Pará', 1186926),
 ('Guarulhos', 'BRA', 'São Paulo', 1095874),
@@ -314,7 +314,7 @@ VALUES
 ('Viamão', 'BRA', 'Rio Grande do Sul', 207557),
 ('Ipatinga', 'BRA', 'Minas Gerais', 206338),
 ('Juazeiro', 'BRA', 'Bahia', 201073);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Juazeiro do Norte', 'BRA', 'Ceará', 199636),
 ('Taboão da Serra', 'BRA', 'São Paulo', 197550),
@@ -417,7 +417,7 @@ VALUES
 ('Santa Cruz do Sul', 'BRA', 'Rio Grande do Sul', 106734),
 ('Linhares', 'BRA', 'Espírito Santo', 106278),
 ('Apucarana', 'BRA', 'Paraná', 105114);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Barretos', 'BRA', 'São Paulo', 104156),
 ('Guaratinguetá', 'BRA', 'São Paulo', 103433),
@@ -515,7 +515,7 @@ VALUES
 ('Preston', 'GBR', 'England', 135000),
 ('Stockport', 'GBR', 'England', 132813),
 ('Norwich', 'GBR', 'England', 124000);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Rotherham', 'GBR', 'England', 121380),
 ('Cambridge', 'GBR', 'England', 121000),
@@ -606,7 +606,7 @@ VALUES
 ('San Felipe de Puerto Plata', 'DOM', 'Puerto Plata', 89423),
 ('Guayaquil', 'ECU', 'Guayas', 2070040),
 ('Quito', 'ECU', 'Pichincha', 1573458);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Cuenca', 'ECU', 'Azuay', 270353),
 ('Machala', 'ECU', 'El Oro', 210368),
@@ -708,7 +708,7 @@ VALUES
 ('Cádiz', 'ESP', 'Andalusia', 142449),
 ('Alcorcón', 'ESP', 'Madrid', 142048),
 ('Huelva', 'ESP', 'Andalusia', 140583);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('León', 'ESP', 'Castilla and León', 139809),
 ('Castellón de la Plana [Castell', 'ESP', 'Valencia', 139712),
@@ -806,7 +806,7 @@ VALUES
 ('Bacoor', 'PHL', 'Southern Tagalog', 305699),
 ('Iligan', 'PHL', 'Central Mindanao', 285061),
 ('Calamba', 'PHL', 'Southern Tagalog', 281146);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Mandaluyong', 'PHL', 'National Capital Reg', 278474),
 ('Butuan', 'PHL', 'Caraga', 267279),
@@ -904,7 +904,7 @@ VALUES
 ('Hinatuan', 'PHL', 'Caraga', 51247),
 ('Calatrava', 'PHL', 'Western Visayas', 50123),
 ('Borbon', 'PHL', 'Central Visayas', 48992);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Libona', 'PHL', 'Northern Mindanao', 48124),
 ('Kabayan', 'PHL', 'Cordillera Administrative', 47189),
@@ -1076,7 +1076,7 @@ VALUES
 ('Kutaisi', 'GEO', 'Imereti', 240900),
 ('Rustavi', 'GEO', 'Kvemo Kartli', 155400),
 ('Batumi', 'GEO', 'Adzaria [Atšara]', 137700);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Padang', 'IDN', 'Sumatera Barat', 534474),
 ('Surakarta', 'IDN', 'Central Java', 518600),
@@ -1329,7 +1329,7 @@ VALUES
 ('Aizawl', 'IND', 'Mizoram', 155240),
 ('Uluberia', 'IND', 'West Bengali', 155172),
 ('Katihar', 'IND', 'Bihar', 154367);
-INSERT INTO city (Name, CountryCode, District, Population)
+INSERT INTO city (Name, Countrycode, District, Population)
 VALUES
 ('Cuddalore', 'IND', 'Tamil Nadu', 153086),
 ('Hugli-Chinsurah', 'IND', 'West Bengali', 151806),

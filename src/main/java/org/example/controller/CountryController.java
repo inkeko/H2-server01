@@ -33,5 +33,10 @@ public class CountryController {
 
         return countryService.getCountriesByNameAndPopulation(prefix, population);
     }
-}
+    @GetMapping("/basic")
+    public List<Object[]> getBasicCountryInfo() {
+        return countryService.getBasicCountryInfo();
+    }
+    }
+
 
