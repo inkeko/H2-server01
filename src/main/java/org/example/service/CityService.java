@@ -18,8 +18,10 @@ public class CityService {
     public List<City> getAllCities() {
         return cityRepository.findAll();
     }
+
+
     public List<City> getCitiesByCountry(String countrycode) {
-        return cityRepository.findByCountryCode(countrycode);
+        return cityRepository.findByCountrycode(countrycode);
     }
 
 }

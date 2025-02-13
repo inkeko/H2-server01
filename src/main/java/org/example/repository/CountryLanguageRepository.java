@@ -10,7 +10,10 @@ import java.util.List;
 
 @Repository
 public interface CountryLanguageRepository extends JpaRepository<CountryLanguage, CountryLanguageId> {
-
+    // Ország nyelvei
     List<CountryLanguage> findByCountry_Code(String countryCode);
+
+    // Csak a hivatalos nyelvek egy adott országban
+    List<CountryLanguage> findByCountry_CodeAndIsofficial(String countryCode, String isofficial);
 }
 

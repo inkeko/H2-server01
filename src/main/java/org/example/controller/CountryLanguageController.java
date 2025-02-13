@@ -23,9 +23,13 @@ public class CountryLanguageController {
     public List<CountryLanguage> getAllLanguages() {
         return countryLanguageService.getAllLanguages();
     }
-    @GetMapping("/languages/{countryCode}")
+    @GetMapping("/{countryCode}")
     public List<CountryLanguage> getLanguages(@PathVariable String countryCode) {
-        return countryLanguageService.getLanguagesByCountryCode(countryCode);
+        return countryLanguageService.getLanguagesByCountry(countryCode);
+    }
+    @GetMapping("/{countryCode}/official")
+    public List<CountryLanguage> getOfficialLanguages(@PathVariable String countryCode) {
+        return countryLanguageService.getOfficialLanguagesByCountry(countryCode);
     }
 }
 

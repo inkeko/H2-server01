@@ -15,11 +15,21 @@ public class CountryLanguageService {
         this.countryLanguageRepository = countryLanguageRepository;
     }
 
+    // Összes nyelv lekérdezése
     public List<CountryLanguage> getAllLanguages() {
         return countryLanguageRepository.findAll();
     }
-    public List<CountryLanguage> getLanguagesByCountryCode(String countryCode) {
+
+    // Egy adott ország összes nyelvének lekérdezése
+    public List<CountryLanguage> getLanguagesByCountry(String countryCode) {
         return countryLanguageRepository.findByCountry_Code(countryCode);
     }
+
+    // Egy adott ország **csak a hivatalos nyelveinek** lekérdezése
+    public List<CountryLanguage> getOfficialLanguagesByCountry(String countryCode) {
+        return countryLanguageRepository.findByCountry_CodeAndIsofficial(countryCode, "T"); // "T" az igaz érték
+    }
+
+
 }
 

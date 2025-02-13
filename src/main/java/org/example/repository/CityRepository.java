@@ -10,5 +10,5 @@ import java.util.List;
 public interface CityRepository extends JpaRepository<City, Integer> {
 // Az findAll() metódust automatikusan biztosítja a JpaRepository
 
-    List<City> findByCountryCode(String countrycode);
+    List<City> findByCountrycode(String countrycode);
 }

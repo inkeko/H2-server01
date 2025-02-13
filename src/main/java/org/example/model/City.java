@@ -17,7 +17,7 @@ public class City {
     @Column(name = "Name", nullable = false, length = 35)
     private String name;
 
-    @Column(name = "Countrycode", nullable = false, length = 3)
+    @Column(name ="Countrycode", nullable = false, length = 3)
     private String countrycode;
 
     @Column(name = "District", nullable = false, length = 50)
@@ -53,12 +53,12 @@ public class City {
         this.name = name;
     }
 
-    public String getCountryCode() {
+    public String getCountrycode() {
         return countrycode;
     }
 
-    public void setCountryCode(String countryCode) {
-        this.countrycode = countryCode;
+    public void setCountrycode(String countrycode) {
+        this.countrycode = countrycode;
     }
 
     public String getDistrict() {
@@ -93,7 +93,7 @@ public class City {
         return "City{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", countryCode='" + countrycode + '\'' +
+                ", countrycode='" + countrycode + '\'' +
                 ", district='" + district + '\'' +
                 ", population=" + population +
                 '}';

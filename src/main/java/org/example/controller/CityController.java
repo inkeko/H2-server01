@@ -23,7 +23,8 @@ public class CityController {
     public List<City> getAllCities() {
         return cityService.getAllCities();
     }
-    @GetMapping("/cities/{countrycode}")
+
+    @GetMapping("/{countrycode}")
     public List<City> getCities(@PathVariable String countrycode) {
         return cityService.getCitiesByCountry(countrycode);
     }
