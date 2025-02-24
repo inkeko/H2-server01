@@ -1,9 +1,10 @@
+
 package org.example.controller;
 
-import org.example.model.Country;
 import org.example.service.CountryService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/countries")
@@ -15,28 +16,24 @@ public class CountryController {
         this.countryService = countryService;
     }
 
-    // Összes ország lekérdezése
     @GetMapping
-    public List<Country> getAllCountries() {
-        return countryService.getAllCountries();
+    public List<Map<String, Object>> getCountries(
+            @RequestParam(name = "independent", required = false, defaultValue = "false") boolean independent,
+            @RequestParam(name = "orderByPopulation", required = false, defaultValue = "false") boolean orderByPopulation) {
+
+        return countryService.getFilteredCountries(independent, orderByPopulation);
     }
 
-    // Országok lekérdezése név kezdőbetűje alapján
     @GetMapping("/search")
-    public List<Country> searchCountries(
+    public List<Map<String, Object>> searchCountries(
             @RequestParam(required = false) String prefix,
             @RequestParam(required = false) Integer population) {
 
-        if (prefix == null || prefix.isEmpty()) {
-            return countryService.getAllCountries();
-        }
-
         return countryService.getCountriesByNameAndPopulation(prefix, population);
     }
+
     @GetMapping("/basic")
-    public List<Object[]> getBasicCountryInfo() {
+    public List<Map<String, Object>> getBasicCountryInfo() {
         return countryService.getBasicCountryInfo();
     }
-    }
-
-
+}
