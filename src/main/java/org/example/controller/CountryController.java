@@ -1,10 +1,12 @@
 
 package org.example.controller;
 
+import org.example.dto.CountryBasicDTO;
+import org.example.dto.IndependentCountryDTO;
 import org.example.service.CountryService;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/countries")
@@ -16,24 +18,17 @@ public class CountryController {
         this.countryService = countryService;
     }
 
+    // ✅ Alapadatokat visszaadó végpont (népesség szerinti rendezés opcionálisan)
     @GetMapping
-    public List<Map<String, Object>> getCountries(
-            @RequestParam(name = "independent", required = false, defaultValue = "false") boolean independent,
-            @RequestParam(name = "orderByPopulation", required = false, defaultValue = "false") boolean orderByPopulation) {
-
-        return countryService.getFilteredCountries(independent, orderByPopulation);
+    public List<CountryBasicDTO> getCountries(
+            @RequestParam(required = false, defaultValue = "false") boolean orderByPopulation) {
+        return countryService.getAllCountries(orderByPopulation);
     }
 
-    @GetMapping("/search")
-    public List<Map<String, Object>> searchCountries(
-            @RequestParam(required = false) String prefix,
-            @RequestParam(required = false) Integer population) {
-
-        return countryService.getCountriesByNameAndPopulation(prefix, population);
-    }
-
-    @GetMapping("/basic")
-    public List<Map<String, Object>> getBasicCountryInfo() {
-        return countryService.getBasicCountryInfo();
+    // ✅ Független országok lekérdezése DTO formátumban (népesség szerinti rendezéssel)
+    @GetMapping("/independent")
+    public List<IndependentCountryDTO> getIndependentCountries(
+            @RequestParam(required = false, defaultValue = "false") boolean orderByPopulation) {
+        return countryService.getIndependentCountries(orderByPopulation);
     }
 }

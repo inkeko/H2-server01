@@ -1,11 +1,8 @@
 package org.example.controller;
 
-import org.example.model.City;
+import org.example.dto.CityDTO;
 import org.example.service.CityService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,14 +16,27 @@ public class CityController {
         this.cityService = cityService;
     }
 
+    // 🔹 Összes város lekérdezése (opcionális rendezéssel)
     @GetMapping
-    public List<City> getAllCities() {
-        return cityService.getAllCities();
+    public List<CityDTO> getAllCities(
+            @RequestParam(required = false, defaultValue = "false") boolean orderByPopulation,
+            @RequestParam(required = false, defaultValue = "false") boolean onlyCapitals) {
+        return cityService.getAllCities(orderByPopulation, onlyCapitals);
     }
 
-    @GetMapping("/{countrycode}")
-    public List<City> getCities(@PathVariable String countrycode) {
-        return cityService.getCitiesByCountry(countrycode);
+    // 🔹 Városok lekérdezése adott ország szerint (opcionális rendezéssel)
+    @GetMapping("/by-country")
+    public List<CityDTO> getCitiesByCountry(
+            @RequestParam String countryCode,
+            @RequestParam(required = false, defaultValue = "false") boolean orderByPopulation) {
+        return cityService.getCitiesByCountry(countryCode, orderByPopulation);
+    }
+
+    // 🔹 Városok lekérdezése adott kontinens szerint (opcionális rendezéssel)
+    @GetMapping("/by-continent")
+    public List<CityDTO> getCitiesByContinent(
+            @RequestParam String continent,
+            @RequestParam(required = false, defaultValue = "false") boolean orderByPopulation) {
+        return cityService.getCitiesByContinent(continent, orderByPopulation);
     }
 }
-

@@ -1,54 +1,52 @@
 package org.example.service;
 
+import org.example.dto.CountryBasicDTO;
+import org.example.dto.IndependentCountryDTO;
+import org.example.model.Country;
 import org.example.repository.CountryRepository;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
-import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 public class CountryService {
-
     private final CountryRepository countryRepository;
 
     public CountryService(CountryRepository countryRepository) {
         this.countryRepository = countryRepository;
     }
 
-    // 🔹 Összes ország lekérése (csak alapadatok!)
-    public List<Map<String, Object>> getBasicCountryInfo() {
-        return countryRepository.findBasicCountryInfo();
+    // ✅ Összes ország listázása DTO formátumban, opcionális rendezéssel
+    public List<CountryBasicDTO> getAllCountries(boolean orderByPopulation) {
+        List<Country> countries = orderByPopulation
+                ? countryRepository.findAllOrderedByPopulation()  // Ha true, akkor rendezett listát ad
+                : countryRepository.findAll();  // Egyébként sima listát
+
+        return countries.stream()
+                .map(c -> new CountryBasicDTO(
+                        c.getCode(),
+                        c.getName(),
+                        c.getContinent(),
+                        c.getPopulation()))
+                .collect(Collectors.toList());
     }
 
-    // 🔹 Országok keresése név kezdőbetűje és népesség alapján
-    public List<Map<String, Object>> getCountriesByNameAndPopulation(String prefix, Integer population) {
-        return countryRepository.findByNameStartingWithAndPopulationGreaterThan(prefix, population);
-    }
+    // ✅ Csak független országokat küld vissza DTO formátumban, népesség szerinti rendezéssel
+    public List<IndependentCountryDTO> getIndependentCountries(boolean orderByPopulation) {
+        List<Country> countries = orderByPopulation
+                ? countryRepository.findIndependentCountriesOrderedByPopulation()
+                : countryRepository.findIndependentCountries();
 
-    // 🔹 Csak független országok lekérése
-    public List<Map<String, Object>> getIndependentCountries() {
-        return countryRepository.findIndependentCountries();
-    }
-
-    // 🔹 Független országok népesség szerint rendezve
-    public List<Map<String, Object>> getIndependentCountriesOrderedByPopulation() {
-        return countryRepository.findIndependentCountriesOrderedByPopulation();
-    }
-
-    // 🔹 Összes ország népesség szerint rendezve
-    public List<Map<String, Object>> getAllCountriesOrderedByPopulation() {
-        return countryRepository.findAllOrderedByPopulation();
-    }
-
-    // 🔹 **Hiányzó metódus: országok szűrése függetlenség és népesség szerint**
-    public List<Map<String, Object>> getFilteredCountries(boolean independent, boolean orderByPopulation) {
-        if (independent && orderByPopulation) {
-            return countryRepository.findIndependentCountriesOrderedByPopulation();
-        } else if (independent) {
-            return countryRepository.findIndependentCountries();
-        } else if (orderByPopulation) {
-            return countryRepository.findAllOrderedByPopulation();
-        } else {
-            return countryRepository.findBasicCountryInfo();
-        }
+        return countries.stream()
+                .map(c -> new IndependentCountryDTO(
+                        c.getCode(),
+                        c.getName(),
+                        c.getContinent(),
+                        c.getPopulation(),
+                        c.getIndepyears()))
+                .collect(Collectors.toList());
     }
 }
+
+
