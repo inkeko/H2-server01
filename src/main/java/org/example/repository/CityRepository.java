@@ -43,4 +43,8 @@ public interface CityRepository extends JpaRepository<City, Integer> {
     @Query("SELECT c FROM City c WHERE c.countrycode IN (SELECT co.code FROM Country co WHERE co.continent = :continent) ORDER BY c.population DESC")
     List<City> findCitiesByContinentOrdered(@Param("continent") String continent);
 
+    //Ez a lekérdezés az országok táblájából (Country) szedi ki a kontinenseket
+    @Query("SELECT DISTINCT co.continent FROM Country co")
+    List<String> findAllContinents();
+
 }

@@ -70,4 +70,8 @@ public class CityService {
                         city.getPopulation()))
                 .collect(Collectors.toList());
     }
+
+    public List<String> getAllContinents() {
+        return cityRepository.findAllContinents();
+    }
 }

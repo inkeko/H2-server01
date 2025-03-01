@@ -39,4 +39,8 @@ public class CityController {
             @RequestParam(required = false, defaultValue = "false") boolean orderByPopulation) {
         return cityService.getCitiesByContinent(continent, orderByPopulation);
     }
+    @GetMapping("/continents")
+    public List<String> getContinents() {
+        return cityService.getAllContinents();
+    }
 }
