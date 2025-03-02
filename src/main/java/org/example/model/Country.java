@@ -25,7 +25,7 @@ public class Country {
     @Column(name = "Surfacearea", nullable = false)
     private Double surfacearea;
 
-    @Column(name = "Indepyears")
+    @Column(name = "Indepyear")
     private Short indepyears;
 
     @Column(name = "Population", nullable = false)
