@@ -20,11 +20,11 @@ public interface CountryRepository extends JpaRepository<Country, String> {
     List<Country> findBasicCountryInfo();
 
     // 🔹 Csak független országok alapadatai
-    @Query("SELECT c FROM Country c WHERE c.indepyears IS NOT NULL")
+    @Query("SELECT c FROM Country c WHERE c.indepyear IS NOT NULL")
     List<Country> findIndependentCountries();
 
     // 🔹 Csak független országok, népesség szerint rendezve
-    @Query("SELECT c FROM Country c WHERE c.indepyears IS NOT NULL ORDER BY c.population DESC")
+    @Query("SELECT c FROM Country c WHERE c.indepyear IS NOT NULL ORDER BY c.population DESC")
     List<Country> findIndependentCountriesOrderedByPopulation();
 
     // 🔹 Összes ország, népesség szerint rendezve

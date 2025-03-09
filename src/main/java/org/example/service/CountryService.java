@@ -44,7 +44,7 @@ public class CountryService {
                         c.getName(),
                         c.getContinent(),
                         c.getPopulation(),
-                        c.getIndepyears()))
+                        c.getIndepyear()))
                 .collect(Collectors.toList());
     }
 }

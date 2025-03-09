@@ -40,10 +40,10 @@ public class CityService {
     }
 
     // ✅ Városok lekérdezése adott ország szerint, opcionális rendezéssel
-    public List<CityDTO> getCitiesByCountry(String countryCode, boolean orderByPopulation) {
+    public List<CityDTO> getCitiesByCountry(String countryName, boolean orderByPopulation) {
         List<City> cities = orderByPopulation
-                ? cityRepository.findCitiesByCountryOrdered(countryCode)
-                : cityRepository.findCitiesByCountry(countryCode);
+                ? cityRepository.findCitiesByCountryOrdered(countryName)
+                : cityRepository.findCitiesByCountry(countryName);
 
         return cities.stream()
                 .map(city -> new CityDTO(
@@ -56,10 +56,22 @@ public class CityService {
     }
 
     // ✅ Városok lekérdezése adott kontinens szerint, opcionális rendezéssel
-    public List<CityDTO> getCitiesByContinent(String continent, boolean orderByPopulation) {
-        List<City> cities = orderByPopulation
-                ? cityRepository.findCitiesByContinentOrdered(continent)
-                : cityRepository.findCitiesByContinent(continent);
+    public List<CityDTO> getCitiesByContinent(String continent, boolean orderByPopulation, boolean onlyCapitals) {
+        // 🌍 Ha "Összes", akkor minden várost adjunk vissza
+        if (continent == null || continent.equalsIgnoreCase("Összes")) {
+            return getAllCities(orderByPopulation, onlyCapitals);
+        }
+
+        List<City> cities;
+        if (onlyCapitals) {
+            cities = orderByPopulation
+                    ? cityRepository.findCapitalsByContinentOrdered(continent)
+                    : cityRepository.findCapitalsByContinent(continent);
+        } else {
+            cities = orderByPopulation
+                    ? cityRepository.findCitiesByContinentOrdered(continent)
+                    : cityRepository.findCitiesByContinent(continent);
+        }
 
         return cities.stream()
                 .map(city -> new CityDTO(
@@ -71,7 +83,20 @@ public class CityService {
                 .collect(Collectors.toList());
     }
 
+
+
+    // ✅ Kontinensek lekérdezése
     public List<String> getAllContinents() {
         return cityRepository.findAllContinents();
     }
+
+    public List<String> getAllCountryNames() {
+        return cityRepository.findAllCountryNames();
+    }
+
+
+    public List<String> getCountriesByContinent(String continent) {
+        return cityRepository.findCountryNamesByContinent(continent);
+    }
+
 }

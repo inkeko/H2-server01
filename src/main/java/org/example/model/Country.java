@@ -26,7 +26,7 @@ public class Country {
     private Double surfacearea;
 
     @Column(name = "Indepyear")
-    private Short indepyears;
+    private Short indepyear;
 
     @Column(name = "Population", nullable = false)
     private Integer population;
@@ -77,8 +77,8 @@ public class Country {
     public void setSurfacearea(Double surfacearea) { this.surfacearea = surfacearea; }
 
 
-    public Short getIndepyears() { return indepyears; }
-    public void setIndepyears(Short indepyears) { this.indepyears = indepyears; }
+    public Short getIndepyear() { return indepyear; }
+    public void setIndepyear(Short indepyear) { this.indepyear = indepyear; }
 
     public Integer getPopulation() { return population; }
     public void setPopulation(Integer population) { this.population = population; }
@@ -115,7 +115,7 @@ public class Country {
                 ", continent='" + continent + '\'' +
                 ", region='" + region + '\'' +
                 ", surfacearea=" + surfacearea +
-                ", indepyears=" + indepyears +
+                ", indepyear=" + indepyear +
                 ", population=" + population +
                 ", lifeexpectancy=" + lifeexpectancy +
                 ", gnp=" + gnp +

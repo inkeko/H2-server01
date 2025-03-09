@@ -14,7 +14,7 @@ public class CountryLanguage {
     private Country country;
 
     @Column(name = "Isofficial", nullable = false, length = 1)
-    private String isofficial;
+    private String isofficial; // 🔥 String helyett boolean
 
     @Column(name = "Percentage", nullable = false, precision = 4)
     private Double percentage;
@@ -34,19 +34,9 @@ public class CountryLanguage {
     public Country getCountry() { return country; }
     public void setCountry(Country country) { this.country = country; }
 
-    public String getIsOfficial() { return isofficial; }
-    public void setIsOfficial(String isOfficial) { this.isofficial = isOfficial; }
+    public boolean getIsOfficial() { return "T".equalsIgnoreCase(isofficial);}  // 🔄 Átalakítás Stringből Boolean típusra!
+    public void setIsOfficial(boolean isOfficial) {  this.isofficial = isOfficial ? "T" : "F"; }
 
     public Double getPercentage() { return percentage; }
     public void setPercentage(Double percentage) { this.percentage = percentage; }
-
-    @Override
-    public String toString() {
-        return "CountryLanguage{" +
-                "id=" + id +
-                ", isOfficial='" + isofficial + '\'' +
-                ", percentage=" + percentage +
-                '}';
-    }
 }
-
