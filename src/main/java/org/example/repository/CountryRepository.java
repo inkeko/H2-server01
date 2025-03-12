@@ -34,5 +34,10 @@ public interface CountryRepository extends JpaRepository<Country, String> {
     // 🔹 Városok szűrése ország szerint
     @Query("SELECT c FROM Country c WHERE c.name LIKE :prefix% AND c.population > :population")
     List<Country> findByNameStartingWithAndPopulationGreaterThan(@Param("prefix") String prefix, @Param("population") Integer population);
+
+
+    // 🔹 Csak az országneveket kérdezzük le
+    @Query("SELECT DISTINCT c.name FROM Country c ORDER BY c.name")
+    List<String> findAllCountryNames();
 }
 

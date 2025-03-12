@@ -4,7 +4,10 @@ import org.example.dto.CityDTO;
 import org.example.service.CityService;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/cities")
@@ -70,8 +73,14 @@ public class CityController {
     // 🔹 Országok lekérdezése adott kontinens szerint
     @GetMapping("/countries/by-continent")
     public List<String> getCountriesByContinent(@RequestParam String continent) {
-        return cityService.getCountriesByContinent(continent);
+        String decodedContinent = URLDecoder.decode(continent, StandardCharsets.UTF_8).trim();
+        return cityService.getCountriesByContinent(decodedContinent);
     }
 
 
+    // 🔹 Országnevek és országkódok lekérdezése (Map<String, String>)
+    @GetMapping("/countries/codes")
+    public Map<String, String> getCountryCodes() {
+        return cityService.getAllCountryCodes(); // Ezt a Service-ben kell megvalósítani
+    }
 }

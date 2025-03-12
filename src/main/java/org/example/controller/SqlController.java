@@ -1,8 +1,10 @@
 package org.example.controller;
 
 import org.example.service.SqlService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
@@ -11,8 +13,11 @@ import java.util.Map;
 @RequestMapping("/api/sql")
 public class SqlController {
 
-    @Autowired
-    private SqlService sqlService;
+    private final SqlService sqlService;
+
+    public SqlController(SqlService sqlService) {
+        this.sqlService = sqlService;
+    }
 
     @PostMapping("/query")
     public List<Map<String, Object>> executeSqlQuery(@RequestBody Map<String, String> request) {
