@@ -42,4 +42,44 @@ public class SqlService {
 
         return results;
     }
+    /**
+     * 🔍 Táblák és oszlopok lekérdezése
+     */
+    public Map<String, List<String>> getDatabaseMetadata() {
+        Map<String, List<String>> metadata = new LinkedHashMap<>();
+
+        // 🔐 Csak ezek a táblák jelenhetnek meg
+        Set<String> allowedTables = Set.of("country", "city", "countrylanguage");
+
+        try (Connection conn = dataSource.getConnection()) {
+            DatabaseMetaData dbMeta = conn.getMetaData();
+            String schema = conn.getSchema();
+
+            try (ResultSet tables = dbMeta.getTables(null, schema, "%", new String[]{"TABLE"})) {
+                while (tables.next()) {
+                    String tableName = tables.getString("TABLE_NAME");
+
+                    if (!allowedTables.contains(tableName.toLowerCase())) {
+                        continue; // kihagyjuk azokat, amik nincsenek a fehérlistában
+                    }
+
+                    List<String> columns = new ArrayList<>();
+                    try (ResultSet cols = dbMeta.getColumns(null, schema, tableName, null)) {
+                        while (cols.next()) {
+                            String colName = cols.getString("COLUMN_NAME");
+                            columns.add(colName);
+                        }
+                    }
+
+                    metadata.put(tableName, columns);
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Nem sikerült lekérdezni az adatbázis metaadatait", e);
+        }
+
+        return metadata;
+    }
+
+
 }

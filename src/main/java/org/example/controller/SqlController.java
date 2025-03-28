@@ -1,10 +1,7 @@
 package org.example.controller;
 
 import org.example.service.SqlService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -24,4 +21,11 @@ public class SqlController {
         String sql = request.get("query");
         return sqlService.executeQuery(sql);
     }
+    /** 🔍 ÚJ: Táblák és oszlopok lekérdezése */
+    @GetMapping("/metadata")
+    public Map<String, List<String>> getMetadata() {
+        return sqlService.getDatabaseMetadata();
+    }
+
+
 }
